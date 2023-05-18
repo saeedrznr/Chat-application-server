@@ -1,0 +1,26 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.8.10'
+    id "org.jetbrains.kotlin.plugin.serialization" version "1.8.0"
+}
+
+group "com.example"
+version "0.0.1"
+
+
+repositories {
+    mavenCentral()
+
+}
+
+dependencies {
+    def ktor_version = "2.1.1"
+    def logback_version = "1.4.5"
+    def kotlin_version = "1.8.10"
+    implementation "ch.qos.logback:logback-classic:$logback_version"
+    implementation "io.ktor:ktor-serialization-kotlinx-json:$ktor_version"
+    testImplementation "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
+
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+
+}
